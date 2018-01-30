@@ -2,20 +2,23 @@
 // +----------------------------------------------------------------------
 // | ThinkPHP [ WE CAN DO IT JUST THINK ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2006~2018 http://thinkphp.cn All rights reserved.
+// | Copyright (c) 2006~2016 http://thinkphp.cn All rights reserved.
 // +----------------------------------------------------------------------
 // | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
 // +----------------------------------------------------------------------
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
-
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
+define('UPLOAD_PATH', './Uploads/');
 return [
     // +----------------------------------------------------------------------
     // | 应用设置
     // +----------------------------------------------------------------------
 
+    // 应用命名空间
+    'app_namespace'          => 'app',
     // 应用调试模式
-    'app_debug'              => false,
+    'app_debug'              => true,
     // 应用Trace
     'app_trace'              => false,
     // 应用模式状态
@@ -54,7 +57,7 @@ return [
     // +----------------------------------------------------------------------
 
     // 默认模块名
-    'default_module'         => 'index',
+    'default_module'         => 'home',
     // 禁止访问模块
     'deny_module_list'       => ['common'],
     // 默认控制器名
@@ -64,7 +67,7 @@ return [
     // 默认验证器
     'default_validate'       => '',
     // 默认的空控制器名
-    'empty_controller'       => 'Error',
+    'empty_controller'       => 'EmptyController',
     // 操作方法后缀
     'action_suffix'          => '',
     // 自动搜索控制器
@@ -79,7 +82,7 @@ return [
     // 兼容PATH_INFO获取
     'pathinfo_fetch'         => ['ORIG_PATH_INFO', 'REDIRECT_PATH_INFO', 'REDIRECT_URL'],
     // pathinfo分隔符
-    'pathinfo_depr'          => '/',
+    'pathinfo_depr'          => '-',
     // URL伪静态后缀
     'url_html_suffix'        => 'html',
     // URL普通方式参数 用于自动生成
@@ -97,9 +100,9 @@ return [
     // 域名部署
     'url_domain_deploy'      => false,
     // 域名根，如thinkphp.cn
-    'url_domain_root'        => '',
+    'url_domain_root'        => 'xfphp.com',
     // 是否自动转换URL中的控制器和操作名
-    'url_convert'            => true,
+    'url_convert'            => false,
     // 默认的访问控制器层
     'url_controller_layer'   => 'controller',
     // 表单请求类型伪装变量
@@ -139,7 +142,12 @@ return [
     ],
 
     // 视图输出字符串内容替换
-    'view_replace_str'       => [],
+    'view_replace_str'       => [
+        '__PUBLIC__' => __PUBLIC__,//public目录的全局变量，在/public/home.php中定义
+        '__STATIC__' =>__PUBLIC__.'/static',
+        '__ADMIN__'    => __PUBLIC__.'/static/admin',
+        '__HOME__'     => __PUBLIC__.'/static/home',
+    ],
     // 默认跳转页面对应的模板文件
     'dispatch_success_tmpl'  => THINK_PATH . 'tpl' . DS . 'dispatch_jump.tpl',
     'dispatch_error_tmpl'    => THINK_PATH . 'tpl' . DS . 'dispatch_jump.tpl',
@@ -174,9 +182,9 @@ return [
     // +----------------------------------------------------------------------
     // | Trace设置 开启 app_trace 后 有效
     // +----------------------------------------------------------------------
-    'trace'                  => [
-        // 内置Html Console 支持扩展
-        'type' => 'Html',
+    'trace' =>  [
+
+        'type'  =>  'Html',
     ],
 
     // +----------------------------------------------------------------------
@@ -231,9 +239,15 @@ return [
     ],
 
     //分页配置
-    'paginate'               => [
+    'paginate'     => [
         'type'      => 'bootstrap',
         'var_page'  => 'page',
         'list_rows' => 15,
     ],
+
+    //自定义配置
+    "sys_name" =>'XFPHP',
+    //文件上传
+    'addwater'=>false,
+    'watertext'=>'XFPHP'
 ];
