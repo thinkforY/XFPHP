@@ -20,7 +20,13 @@ class Login extends Controller
 				return json(['code'=>0,'msg'=>'用户名或者密码错误，重新输入!']);
 			}
 		}
-		$this->cache_model = array("");
+		// $this->cache_model = array('Module','Role','Category','Posid','Field','System');
+		// $this->system = F("System");
+		// if (empty($this->system)) {
+		// 	foreach ($this->cache_model as $r) {
+		// 		savecache($r);
+		// 	}
+		// }
 		return $this->fetch("login");
 	}
 	//退出登录
