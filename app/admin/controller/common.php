@@ -1,10 +1,52 @@
 <?php
-namespace app\index\controller;
-
-class Index
+namespace app\admin\controller;
+use think\Request;
+use think\Db;
+use think\Controller;
+class Common extends Controller
 {
-    public function index()
+    protected $mod,$role,$system,$nav,$menudata,$cache_model,$categorys,$module,$moduleid,$adminRules,$HrefId;
+    public function _initialize()
     {
-        return '<style type="text/css">*{ padding: 0; margin: 0; } .think_default_text{ padding: 4px 48px;} a{color:#2E5CD5;cursor: pointer;text-decoration: none} a:hover{text-decoration:underline; } body{ background: #fff; font-family: "Century Gothic","Microsoft yahei"; color: #333;font-size:18px} h1{ font-size: 100px; font-weight: normal; margin-bottom: 12px; } p{ line-height: 1.6em; font-size: 42px }</style><div style="padding: 24px 48px;"> <h1>:)</h1><p> ThinkPHP V5<br/><span style="font-size:30px">十年磨一剑 - 为API开发设计的高性能框架</span></p><span style="font-size:22px;">[ V5.0 版本由 <a href="http://www.qiniu.com" target="qiniu">七牛云</a> 独家赞助发布 ]</span></div><script type="text/javascript" src="http://tajs.qq.com/stats?sId=9347272" charset="UTF-8"></script><script type="text/javascript" src="http://ad.topthink.com/Public/static/client.js"></script><thinkad id="ad_bd568ce7058a1091"></thinkad>';
+
+        //判断管理员是否登录
+        if (!session('aid')) {
+            $this->redirect('login/index');
+        }
+        define('MODULE_NAME',strtolower(request()->controller()));
+        define('ACTION_NAME',strtolower(request()->action()));
+        //权限管理
+        //当前操作权限ID
+        if(session('aid')!=1){
+            $this->HrefId = db('auth_rule')->where('href',MODULE_NAME.'/'.ACTION_NAME)->value('id');
+            //当前管理员权限
+            $map['a.admin_id'] = session('aid');
+            $rules=Db::table(config('database.prefix').'admin')->alias('a')
+                ->join(config('database.prefix').'auth_group ag','a.group_id = ag.group_id','left')
+                ->where($map)
+                ->value('ag.rules');
+            $this->adminRules = explode(',',$rules);
+            if($this->HrefId){
+                if(!in_array($this->HrefId,$this->adminRules)){
+                    $this->error('您无此操作权限','index');
+                }
+            }
+        }
+        $this->system = F('System');
+        $this->categorys = F('Category');
+        $this->module = F('Module');
+        $this->mod = F('Mod');
+        $this->role = F('Role');
+        $this->cache_model=array('Module','Role','Category','Posid','Field','System');
+        if(empty($this->system)){
+            foreach($this->cache_model as $r){
+                savecache($r);
+            }
+        }
     }
+    //空操作
+    public function _empty(){
+        return $this->error('空操作，返回上次访问页面中...');
+    }
+
 }

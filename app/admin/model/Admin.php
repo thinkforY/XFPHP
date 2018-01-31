@@ -11,7 +11,7 @@ class Admin extends Model
 		if ($user) {
 			if($user['pwd'] == md5($data['password'])){
 				session('username',$user['username']);
-				session('aid',$user['admin_aid']);
+				session('aid',$user['admin_id']);
 				return 1;//信息正确
 			}else{
 				return -1;//信息错误
