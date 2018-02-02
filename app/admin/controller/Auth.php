@@ -37,4 +37,40 @@ class Auth extends Common
 		}
 		return view();
 	}
+	//添加管理员
+	public function adminAdd(){
+		if (request()->isPost()) {
+			$data = input('post.');
+			$check_user = Admin::get(['username'=>$data['username']]);
+			if ($check_user) {
+				return $result = ['code'=>0,'msg'=>'用户已存在，请重新输入用户名！'];
+			}
+			$data['pwd'] = input('post.pwd','','md5');
+			$data['add_time'] = time();
+			$data['ip'] = request()->ip();
+			//验证
+			$msg = $this->validate($data,'Admin');
+			if ($msg!='true') {
+				return $result = ['code'=>0,'msg'=>$msg];
+			}
+			//单独验证密码
+			$checkPwd = Validate::is(input('post.pwd'),'require');
+			if ($checkPwd === false) {
+				return $result = ['code'=>0,'msg'=>'密码不能为空！'];
+			}
+			//添加
+			if (Admin::create($data)) {
+				return $result = ['code'=>1,'msg'=>'管理员添加成功！','url'=>url('adminList')];
+			}else{
+				return $result = ['code'=>0,'msg'=>'管理员添加失败！'];
+			}
+		}else{
+			$auth_group = db('auth_group')->select();
+			$this->assign('authGroup',json_encode($auth_group));
+			$this->assign('title',lang('add').lang('admin'));
+			$this->assign('info','null');
+			$this->assign('selected','null');
+			return view('adminForm');
+		}
+	}
 }
