@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:56:"D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\adminForm.html";i:1517539239;s:57:"D:\PHPStudy\WWW\XFPHP\app\admin\view\common\mainHead.html";i:1500516744;s:57:"D:\PHPStudy\WWW\XFPHP\app\admin\view\common\mainFoot.html";i:1500448109;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:56:"D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\adminForm.html";i:1517539635;s:57:"D:\PHPStudy\WWW\XFPHP\app\admin\view\common\mainHead.html";i:1500516744;s:57:"D:\PHPStudy\WWW\XFPHP\app\admin\view\common\mainFoot.html";i:1500448109;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -88,28 +88,6 @@
 
 <script src="/public/static/js/angular.min.js"></script>
 <script>
-    // var m = angular.module("hd",[]);
-    // m.controller("ctrl",["$scope",function($scope){
-    //     $scope.field = "<?php echo $info; ?>" != "null" ? <?php echo $info; ?>:{group_id:'',username:'',email:'',tel:'',is_open:1};
-    //     $scope.group = <?php echo $authGroup; ?>;
-    //     $scope.selected = <?php echo $selected; ?>;
-    //     layui.use(['form','layer'],function(){
-    //         var form = layui.form(),layer = layui.layer;
-    //         form.on("submit(submit)",function(data){
-    //             data.field.admin_id = $scope.field.admin_id;
-    //             // 提交到方法 默认为本身
-    //             $.post("",data.field,function(res){
-    //                 if (res.code > 0) {
-    //                     layer.msg(res.msg,{time:1800,icon:1},function(){
-    //                         location.href = res.url;
-    //                     });
-    //                 }else{
-    //                     layer.msg(res.msg,{time:1800,icon:2});
-    //                 }
-    //             });
-    //         });
-    //     });
-    // }]);
     var m = angular.module('hd',[]);
     m.controller('ctrl',['$scope',function($scope) {
         $scope.field = '<?php echo $info; ?>'!='null'?<?php echo $info; ?>:{group_id:'',username:'',email:'',tel:'',is_open:1};
