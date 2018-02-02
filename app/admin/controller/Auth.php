@@ -166,7 +166,7 @@ class Auth extends Common
 		}else{
 			$this->assign('title','添加用户组');
 			$this->assign('info','null');
-			return $this->fetch('groupForm')；
+			return $this->fetch('groupForm');
 		}
 	}
 }
