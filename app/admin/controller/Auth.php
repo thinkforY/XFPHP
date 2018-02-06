@@ -1,7 +1,7 @@
 <?php
 namespace app\admin\controller;
 use think\Db;
-use clt\leftnav;
+use clt\Leftnav;
 use app\admin\model\Admin;
 use app\admin\model\AuthGroup;
 use app\admin\model\AuthRule;
@@ -167,6 +167,141 @@ class Auth extends Common
 			$this->assign('title','添加用户组');
 			$this->assign('info','null');
 			return $this->fetch('groupForm');
+		}
+	}
+	//添加分组
+	public function groupEdit(){
+		if (request()->isPost()) {
+			$data = input('post.');
+			AuthGroup::update($data);
+			$result = ['code'=>1,'msg'=>'用户组修改成功！','url'=>url('adminGroup')];
+			return $result;
+		}else{
+			$id = input('id');
+			$info = AuthGroup::get(['group_id'=>$id]);
+			$this->assign('info',json_encode($info,true));
+			$this->assign('title','编辑用户组');
+			return $this->fetch('groupForm');
+		}
+	}
+	//分组配置规则
+	public function groupAccess(){
+		$nav = new Leftnav();
+		$admin_rule = db('auth_rule')->field('id,pid,title')->order('sort asc')->select();
+		$rules = db('auth_group')->where('group_id',input('id'))->value('rules');
+		$arr = $nav->auth($admin_rule,$pid=0,$rules);
+		$arr[] = array(
+			'id'=>0,
+			'pid'=>0,
+			'title'=>'全部',
+			'open'=>true
+		);
+		$this->assign('data',json_encode($arr,true));
+		return $this->fetch();
+	}
+	public function groupSetaccess(){
+		$rules = input('post.rules');
+		if (empty($rules)) {
+			return array('msg'=>'请选择权限!','code'=>0);
+		}
+		$data = input('post.');
+		if (AuthGroup::update($data)) {
+			return array('msg'=>'权限配置成功！','url'=>url('adminGroup'),'code'=>1);
+		}else{
+			return array('msg'=>'保存错误','code'=>0);
+		}
+	}
+	/********************************权限管理*******************************/
+	public function adminRule(){
+		$nav = new Leftnav();
+		$arr = cache('authRuleList');
+		if (!$arr) {
+			$authRule = authRule::all(function($query){
+				$query->order('sort','asc');
+			});
+			$arr = $nav->menu($authRule);
+			cache('authRuleList',$arr,3600);
+		}
+		$this->assign('admin_rule',$arr);//权限列表
+		return $this->fetch();
+	}
+	public function ruleAdd(){
+		if (request()->isPost()) {
+			$data = input('post.');
+			$data['addtime'] = time();
+			authRule::update($data);
+			cache('authRule',NULL);
+			cache('authRuleList',NULL);
+			return $result = ['code'=>1,'msg'=>'权限添加成功！','url'=>url('adminRule')];
+		}else{
+			$nav = new Leftnav();
+			$arr = cache('authRuleList');
+			if (!$arr) {
+				$authRule = authRule::all(function($query){
+					$query->order('sort','asc')；
+				})；
+				$arr = $nav->menu($authRule);
+				cache('authRuleList',$arr,3600)；
+			}
+			$this->assign('admin_rule',$arr);//权限列表
+			return $this->fetch();
+		}
+	}
+	public function ruleState(){
+		$id = input('post.id');
+		$statusone = db('auth_rule')->where(array('id'=>$id))->value('menustatus');
+		//判断当前状态
+		cache('authRule',NULL);
+		cache('authRuleList',NULL);
+		if ($statusone == 1) {
+			$statedata = array('menustatus'=>0);
+			db('auth_rule')->where(array('id'=>$id))->setField($statedata);
+			return $result = ['code'=>1,'msg'=>'状态禁止'];
+		}else{
+			$statedata = array('menustatus'=>1);
+			db('auth_rule')->where(array('id'=>$id))->setField($statedata);
+			return $result = ['code'=>1,'msg'=>'状态开启'];
+		}
+	}
+	public function ruleTz(){
+		$id = input('post.id');
+		$statusone = db('auth_rule')->where(array('id'=>$id))->value('authopen');
+		if ($statusone == 1) {
+			$statedata = array('authopen'=>0);
+			db('auth_rule')->where('id'=>$id)->setField($statedata);
+			$result['info'] = '需要验证';
+			$result['status'] = 1;
+		}else{
+			$statedata = array('authopen'=>1);
+			db('auth_rule')->where(array('id'=>$id))->setField($statedata);
+			$result['info'] = '无需验证';
+			$result['status'] = 1;
+		}
+		return $result;
+	}
+
+	public function ruleDel(){
+		authRule::destroy(['id'=>input('param.id')]);
+		cache('authRule',NULL);
+		cache('authRuleList',NULL);
+		$this->redirect('adminRule');
+	}
+	public function ruleEdit(){
+		if (request()->isPost()) {
+			$datas = input('post.');
+			if (authRule::update($datas)) {
+				cache('authRule',NULL);
+				cache('authRuleList',NULL);
+				return json(['code'=>1,'msg'=>'保存成功！','url'=>url('adminRule')]);
+			}else{
+				return json(['code'=>0,'msg'=>'保存失败！']);
+			}
+		}else{
+			$admin_rule = authRule::get(function($query){
+				$query->where(['id'=>input('id')])->field('id,href,title,icon,sort,menustatus');
+			});
+			$this->assign('rule',json_encode($admin_rule,true));
+			return $this->fetch();
 		}
 	}
 }

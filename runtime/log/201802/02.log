@@ -4665,3 +4665,1752 @@
 [ sql ] [ SQL ] SHOW COLUMNS FROM `xf_admin` [ RunTime:0.006647s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xf_admin` `a` LEFT JOIN `xf_auth_group` `ag` ON `a`.`group_id`=`ag`.`group_id` LIMIT 1 [ RunTime:0.002230s ]
 [ sql ] [ SQL ] SELECT `a`.*,`ag`.`title` FROM `xf_admin` `a` LEFT JOIN `xf_auth_group` `ag` ON `a`.`group_id`=`ag`.`group_id` LIMIT 0,15 [ RunTime:0.000695s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:12:54+08:00 ] 0.0.0.0 GET /admin/Auth/adminGroup.html
+[ info ] localhost:4259/admin/Auth/adminGroup.html [运行时间：0.086409s][吞吐率：11.57req/s] [内存消耗：3,088.73kb] [文件加载：62]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Auth',
+    2 => 'adminGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->adminGroup[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\adminGroup.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002784s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_auth_group` [ RunTime:0.010758s ]
+[ sql ] [ SQL ] SELECT * FROM `xf_auth_group` [ RunTime:0.000978s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:13:00+08:00 ] 0.0.0.0 GET /admin/auth/groupEdit/id/1.html
+[ info ] localhost:4259/admin/auth/groupEdit/id/1.html [运行时间：0.069306s][吞吐率：14.43req/s] [内存消耗：3,085.02kb] [文件加载：62]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'groupEdit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/Auth/adminGroup.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->groupEdit[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\groupForm.html [ array (
+  0 => 'info',
+  1 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001051s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_auth_group` [ RunTime:0.008835s ]
+[ sql ] [ SQL ] SELECT * FROM `xf_auth_group` WHERE  `group_id` = 1 LIMIT 1 [ RunTime:0.000617s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:13:01+08:00 ] 0.0.0.0 GET /admin/auth/adminGroup.html
+[ info ] localhost:4259/admin/auth/adminGroup.html [运行时间：0.075052s][吞吐率：13.32req/s] [内存消耗：2,944.22kb] [文件加载：60]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'adminGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/auth/groupEdit/id/1.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->adminGroup[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\adminGroup.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004632s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_auth_group` [ RunTime:0.008937s ]
+[ sql ] [ SQL ] SELECT * FROM `xf_auth_group` [ RunTime:0.000436s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:13:03+08:00 ] 0.0.0.0 GET /admin/auth/groupEdit/id/2.html
+[ info ] localhost:4259/admin/auth/groupEdit/id/2.html [运行时间：0.062734s][吞吐率：15.94req/s] [内存消耗：2,940.76kb] [文件加载：60]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'groupEdit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/auth/adminGroup.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->groupEdit[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\groupForm.html [ array (
+  0 => 'info',
+  1 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010652s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_auth_group` [ RunTime:0.007743s ]
+[ sql ] [ SQL ] SELECT * FROM `xf_auth_group` WHERE  `group_id` = 2 LIMIT 1 [ RunTime:0.000687s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:13:04+08:00 ] 0.0.0.0 GET /admin/auth/adminGroup.html
+[ info ] localhost:4259/admin/auth/adminGroup.html [运行时间：0.056151s][吞吐率：17.81req/s] [内存消耗：2,944.22kb] [文件加载：60]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'adminGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/auth/groupEdit/id/2.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->adminGroup[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\adminGroup.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000975s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_auth_group` [ RunTime:0.008446s ]
+[ sql ] [ SQL ] SELECT * FROM `xf_auth_group` [ RunTime:0.000626s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:13:06+08:00 ] 0.0.0.0 GET /admin/auth/groupAdd.html
+[ info ] localhost:4259/admin/auth/groupAdd.html [运行时间：0.028986s][吞吐率：34.50req/s] [内存消耗：1,858.80kb] [文件加载：51]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'groupAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/auth/adminGroup.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->groupAdd[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\groupForm.html [ array (
+  0 => 'title',
+  1 => 'info',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-02T15:13:08+08:00 ] 0.0.0.0 GET /admin/auth/adminGroup.html
+[ info ] localhost:4259/admin/auth/adminGroup.html [运行时间：0.056645s][吞吐率：17.65req/s] [内存消耗：2,944.27kb] [文件加载：60]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'adminGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/auth/groupAdd.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->adminGroup[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\adminGroup.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001101s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_auth_group` [ RunTime:0.010186s ]
+[ sql ] [ SQL ] SELECT * FROM `xf_auth_group` [ RunTime:0.000549s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:13:09+08:00 ] 0.0.0.0 GET /admin/auth/groupAccess/id/1.html
+[ info ] localhost:4259/admin/auth/groupAccess/id/1.html [运行时间：0.033375s][吞吐率：29.96req/s] [内存消耗：1,844.76kb] [文件加载：53]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'groupAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/auth/adminGroup.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->groupAccess[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'clt\leftnav' not found[D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php:189]
+---------------------------------------------------------------
+[ 2018-02-02T15:13:15+08:00 ] 0.0.0.0 GET /admin/auth/adminGroup.html
+[ info ] localhost:4259/admin/auth/adminGroup.html [运行时间：0.060145s][吞吐率：16.63req/s] [内存消耗：2,944.27kb] [文件加载：60]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'adminGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/auth/groupAdd.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->adminGroup[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\adminGroup.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001078s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_auth_group` [ RunTime:0.008163s ]
+[ sql ] [ SQL ] SELECT * FROM `xf_auth_group` [ RunTime:0.000573s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:15:10+08:00 ] 0.0.0.0 GET /admin/auth/groupAccess/id/1.html
+[ info ] localhost:4259/admin/auth/groupAccess/id/1.html [运行时间：0.038650s][吞吐率：25.87req/s] [内存消耗：1,844.65kb] [文件加载：53]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'groupAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/auth/adminGroup.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->groupAccess[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'clt\leftnav' not found[D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php:189]
+---------------------------------------------------------------
+[ 2018-02-02T15:15:12+08:00 ] 0.0.0.0 GET /admin/auth/adminGroup.html
+[ info ] localhost:4259/admin/auth/adminGroup.html [运行时间：0.063695s][吞吐率：15.70req/s] [内存消耗：2,944.27kb] [文件加载：60]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'adminGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/auth/groupAdd.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->adminGroup[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\adminGroup.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000998s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_auth_group` [ RunTime:0.009656s ]
+[ sql ] [ SQL ] SELECT * FROM `xf_auth_group` [ RunTime:0.000698s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:15:14+08:00 ] 0.0.0.0 GET /admin/auth/adminGroup.html
+[ info ] localhost:4259/admin/auth/adminGroup.html [运行时间：0.059258s][吞吐率：16.88req/s] [内存消耗：2,944.49kb] [文件加载：60]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'adminGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/auth/groupAdd.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->adminGroup[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\adminGroup.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001897s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_auth_group` [ RunTime:0.008806s ]
+[ sql ] [ SQL ] SELECT * FROM `xf_auth_group` [ RunTime:0.000495s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:15:16+08:00 ] 0.0.0.0 GET /admin/auth/groupAccess/id/1.html
+[ info ] localhost:4259/admin/auth/groupAccess/id/1.html [运行时间：0.029778s][吞吐率：33.58req/s] [内存消耗：1,844.65kb] [文件加载：53]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'groupAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/auth/adminGroup.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->groupAccess[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'clt\leftnav' not found[D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php:189]
+---------------------------------------------------------------
+[ 2018-02-02T15:15:44+08:00 ] 0.0.0.0 GET /admin/auth/adminAdd.html
+[ info ] localhost:4259/admin/auth/adminAdd.html [运行时间：0.054614s][吞吐率：18.31req/s] [内存消耗：2,632.39kb] [文件加载：59]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'adminAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/auth/adminList.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->adminAdd[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\adminForm.html [ array (
+  0 => 'authGroup',
+  1 => 'title',
+  2 => 'info',
+  3 => 'selected',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010652s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_auth_group` [ RunTime:0.007319s ]
+[ sql ] [ SQL ] SELECT * FROM `xf_auth_group` [ RunTime:0.000586s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:15:46+08:00 ] 0.0.0.0 GET /admin/auth/adminList.html
+[ info ] localhost:4259/admin/auth/adminList.html [运行时间：0.032336s][吞吐率：30.93req/s] [内存消耗：1,871.03kb] [文件加载：52]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'adminList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/auth/adminAdd.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->adminList[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\adminList.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-02T15:15:46+08:00 ] 0.0.0.0 POST /admin/auth/adminList.html
+[ info ] localhost:4259/admin/auth/adminList.html [运行时间：0.067550s][吞吐率：14.80req/s] [内存消耗：2,682.12kb] [文件加载：60]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'adminList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'content-length' => '23',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:4259',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:4259/admin/auth/adminList.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+  'pageIndex' => '1',
+  'pageSize' => '15',
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->adminList[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001276s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_admin` [ RunTime:0.008705s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xf_admin` `a` LEFT JOIN `xf_auth_group` `ag` ON `a`.`group_id`=`ag`.`group_id` LIMIT 1 [ RunTime:0.001061s ]
+[ sql ] [ SQL ] SELECT `a`.*,`ag`.`title` FROM `xf_admin` `a` LEFT JOIN `xf_auth_group` `ag` ON `a`.`group_id`=`ag`.`group_id` LIMIT 0,15 [ RunTime:0.000955s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:15:48+08:00 ] 0.0.0.0 GET /admin/Auth/adminRule.html
+[ info ] localhost:4259/admin/Auth/adminRule.html [运行时间：0.040871s][吞吐率：24.47req/s] [内存消耗：1,801.96kb] [文件加载：51]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Auth',
+    2 => 'adminRule',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Common->_empty[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Common.php ]
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-02T15:15:49+08:00 ] 0.0.0.0 GET /admin/Auth/adminGroup.html
+[ info ] localhost:4259/admin/Auth/adminGroup.html [运行时间：0.071943s][吞吐率：13.90req/s] [内存消耗：2,944.24kb] [文件加载：60]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Auth',
+    2 => 'adminGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->adminGroup[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\adminGroup.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001042s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_auth_group` [ RunTime:0.010792s ]
+[ sql ] [ SQL ] SELECT * FROM `xf_auth_group` [ RunTime:0.001341s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:15:51+08:00 ] 0.0.0.0 GET /admin/auth/adminAdd.html
+[ info ] localhost:4259/admin/auth/adminAdd.html [运行时间：0.048547s][吞吐率：20.60req/s] [内存消耗：2,632.39kb] [文件加载：59]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'adminAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/auth/adminList.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->adminAdd[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\adminForm.html [ array (
+  0 => 'authGroup',
+  1 => 'title',
+  2 => 'info',
+  3 => 'selected',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001043s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_auth_group` [ RunTime:0.007566s ]
+[ sql ] [ SQL ] SELECT * FROM `xf_auth_group` [ RunTime:0.000552s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:15:53+08:00 ] 0.0.0.0 GET /admin/auth/groupAccess/id/1.html
+[ info ] localhost:4259/admin/auth/groupAccess/id/1.html [运行时间：0.033982s][吞吐率：29.43req/s] [内存消耗：1,844.65kb] [文件加载：53]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'groupAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/Auth/adminGroup.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->groupAccess[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'clt\leftnav' not found[D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php:189]
+---------------------------------------------------------------
+[ 2018-02-02T15:16:09+08:00 ] 0.0.0.0 GET /admin/auth/groupAccess/id/1.html
+[ info ] localhost:4259/admin/auth/groupAccess/id/1.html [运行时间：0.031882s][吞吐率：31.37req/s] [内存消耗：1,844.86kb] [文件加载：53]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'groupAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/Auth/adminGroup.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->groupAccess[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'clt\leftnav' not found[D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php:189]
+---------------------------------------------------------------
+[ 2018-02-02T15:16:50+08:00 ] 0.0.0.0 GET /admin/auth/groupAccess/id/1.html
+[ info ] localhost:4259/admin/auth/groupAccess/id/1.html [运行时间：0.068207s][吞吐率：14.66req/s] [内存消耗：2,803.41kb] [文件加载：61]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'groupAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/Auth/adminGroup.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->groupAccess[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\groupAccess.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001095s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_auth_rule` [ RunTime:0.008217s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title` FROM `xf_auth_rule` ORDER BY sort asc [ RunTime:0.001040s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_auth_group` [ RunTime:0.007143s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `xf_auth_group` WHERE  `group_id` = 1 LIMIT 1 [ RunTime:0.000679s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:17:02+08:00 ] 0.0.0.0 GET /admin
+[ info ] localhost:4259/admin [运行时间：0.076325s][吞吐率：13.10req/s] [内存消耗：2,701.27kb] [文件加载：61]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Index.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\index\index.html [ array (
+  0 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001171s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_auth_rule` [ RunTime:0.007391s ]
+[ sql ] [ SQL ] SELECT * FROM `xf_auth_rule` WHERE  (  menustatus=1 ) ORDER BY `sort` [ RunTime:0.001020s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:17:03+08:00 ] 0.0.0.0 GET /admin/index/main.html
+[ info ] localhost:4259/admin/index/main.html [运行时间：0.076173s][吞吐率：13.13req/s] [内存消耗：1,975.89kb] [文件加载：54]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'main',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->main[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\index\main.html [ array (
+  0 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001145s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SELECT VERSION() AS ver [ RunTime:0.000569s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:17:06+08:00 ] 0.0.0.0 GET /admin/Auth/adminGroup.html
+[ info ] localhost:4259/admin/Auth/adminGroup.html [运行时间：0.086992s][吞吐率：11.50req/s] [内存消耗：2,944.24kb] [文件加载：60]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Auth',
+    2 => 'adminGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->adminGroup[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\adminGroup.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001081s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_auth_group` [ RunTime:0.011723s ]
+[ sql ] [ SQL ] SELECT * FROM `xf_auth_group` [ RunTime:0.000686s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:17:07+08:00 ] 0.0.0.0 GET /admin/auth/groupAccess/id/1.html
+[ info ] localhost:4259/admin/auth/groupAccess/id/1.html [运行时间：0.088232s][吞吐率：11.33req/s] [内存消耗：2,648.71kb] [文件加载：59]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'groupAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/Auth/adminGroup.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->groupAccess[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\groupAccess.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001207s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_auth_rule` [ RunTime:0.008675s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title` FROM `xf_auth_rule` ORDER BY sort asc [ RunTime:0.000905s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_auth_group` [ RunTime:0.008294s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `xf_auth_group` WHERE  `group_id` = 1 LIMIT 1 [ RunTime:0.000571s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:17:10+08:00 ] 0.0.0.0 GET /admin/Auth/adminGroup.html
+[ info ] localhost:4259/admin/Auth/adminGroup.html [运行时间：0.067575s][吞吐率：14.80req/s] [内存消耗：2,944.24kb] [文件加载：60]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Auth',
+    2 => 'adminGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->adminGroup[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\adminGroup.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000961s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_auth_group` [ RunTime:0.007322s ]
+[ sql ] [ SQL ] SELECT * FROM `xf_auth_group` [ RunTime:0.000488s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:17:14+08:00 ] 0.0.0.0 GET /admin/auth/groupEdit/id/1.html
+[ info ] localhost:4259/admin/auth/groupEdit/id/1.html [运行时间：0.066368s][吞吐率：15.07req/s] [内存消耗：2,941.36kb] [文件加载：60]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'groupEdit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/Auth/adminGroup.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->groupEdit[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\groupForm.html [ array (
+  0 => 'info',
+  1 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001069s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_auth_group` [ RunTime:0.008072s ]
+[ sql ] [ SQL ] SELECT * FROM `xf_auth_group` WHERE  `group_id` = 1 LIMIT 1 [ RunTime:0.000413s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:17:16+08:00 ] 0.0.0.0 GET /admin/auth/adminGroup.html
+[ info ] localhost:4259/admin/auth/adminGroup.html [运行时间：0.065711s][吞吐率：15.22req/s] [内存消耗：2,944.22kb] [文件加载：60]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'adminGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/auth/groupEdit/id/1.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->adminGroup[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\adminGroup.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000879s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_auth_group` [ RunTime:0.006769s ]
+[ sql ] [ SQL ] SELECT * FROM `xf_auth_group` [ RunTime:0.000426s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:17:17+08:00 ] 0.0.0.0 GET /admin/auth/groupEdit/id/2.html
+[ info ] localhost:4259/admin/auth/groupEdit/id/2.html [运行时间：0.083304s][吞吐率：12.00req/s] [内存消耗：2,940.76kb] [文件加载：60]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'groupEdit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/auth/adminGroup.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->groupEdit[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\groupForm.html [ array (
+  0 => 'info',
+  1 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001004s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_auth_group` [ RunTime:0.010044s ]
+[ sql ] [ SQL ] SELECT * FROM `xf_auth_group` WHERE  `group_id` = 2 LIMIT 1 [ RunTime:0.000702s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:17:18+08:00 ] 0.0.0.0 GET /admin/auth/adminGroup.html
+[ info ] localhost:4259/admin/auth/adminGroup.html [运行时间：0.090740s][吞吐率：11.02req/s] [内存消耗：2,944.22kb] [文件加载：60]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'adminGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/auth/groupEdit/id/2.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->adminGroup[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\adminGroup.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000906s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_auth_group` [ RunTime:0.013599s ]
+[ sql ] [ SQL ] SELECT * FROM `xf_auth_group` [ RunTime:0.000453s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:17:39+08:00 ] 0.0.0.0 GET /admin/Auth/adminRule.html
+[ info ] localhost:4259/admin/Auth/adminRule.html [运行时间：0.057455s][吞吐率：17.40req/s] [内存消耗：1,801.96kb] [文件加载：51]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Auth',
+    2 => 'adminRule',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Common->_empty[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Common.php ]
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-02T15:17:42+08:00 ] 0.0.0.0 GET /admin/auth/groupEdit/id/2.html
+[ info ] localhost:4259/admin/auth/groupEdit/id/2.html [运行时间：0.085425s][吞吐率：11.71req/s] [内存消耗：2,940.76kb] [文件加载：60]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'groupEdit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/auth/adminGroup.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->groupEdit[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\groupForm.html [ array (
+  0 => 'info',
+  1 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001075s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_auth_group` [ RunTime:0.007015s ]
+[ sql ] [ SQL ] SELECT * FROM `xf_auth_group` WHERE  `group_id` = 2 LIMIT 1 [ RunTime:0.000606s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:17:48+08:00 ] 0.0.0.0 GET /admin/auth/adminGroup.html
+[ info ] localhost:4259/admin/auth/adminGroup.html [运行时间：0.057202s][吞吐率：17.48req/s] [内存消耗：2,944.22kb] [文件加载：60]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'adminGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/auth/groupEdit/id/1.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->adminGroup[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\adminGroup.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001096s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_auth_group` [ RunTime:0.007080s ]
+[ sql ] [ SQL ] SELECT * FROM `xf_auth_group` [ RunTime:0.000465s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:17:57+08:00 ] 0.0.0.0 GET /admin/Auth/adminList.html
+[ info ] localhost:4259/admin/Auth/adminList.html [运行时间：0.049688s][吞吐率：20.13req/s] [内存消耗：1,870.96kb] [文件加载：52]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Auth',
+    2 => 'adminList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->adminList[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\adminList.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-02T15:17:57+08:00 ] 0.0.0.0 POST /admin/auth/adminList.html
+[ info ] localhost:4259/admin/auth/adminList.html [运行时间：0.088489s][吞吐率：11.30req/s] [内存消耗：2,682.12kb] [文件加载：60]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'adminList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'content-length' => '23',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:4259',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:4259/admin/Auth/adminList.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+  'pageIndex' => '1',
+  'pageSize' => '15',
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->adminList[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001548s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_admin` [ RunTime:0.008461s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xf_admin` `a` LEFT JOIN `xf_auth_group` `ag` ON `a`.`group_id`=`ag`.`group_id` LIMIT 1 [ RunTime:0.000475s ]
+[ sql ] [ SQL ] SELECT `a`.*,`ag`.`title` FROM `xf_admin` `a` LEFT JOIN `xf_auth_group` `ag` ON `a`.`group_id`=`ag`.`group_id` LIMIT 0,15 [ RunTime:0.000363s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:18:02+08:00 ] 0.0.0.0 GET /admin/index/index.html
+[ info ] localhost:4259/admin/index/index.html [运行时间：0.049939s][吞吐率：20.02req/s] [内存消耗：1,916.36kb] [文件加载：54]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Index.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\index\index.html [ array (
+  0 => 'menus',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-02T15:18:02+08:00 ] 0.0.0.0 GET /admin/index/main.html
+[ info ] localhost:4259/admin/index/main.html [运行时间：0.073599s][吞吐率：13.59req/s] [内存消耗：1,975.88kb] [文件加载：54]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'main',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->main[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\index\main.html [ array (
+  0 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001466s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SELECT VERSION() AS ver [ RunTime:0.000438s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:18:05+08:00 ] 0.0.0.0 GET /admin/Auth/adminList.html
+[ info ] localhost:4259/admin/Auth/adminList.html [运行时间：0.073608s][吞吐率：13.59req/s] [内存消耗：1,870.98kb] [文件加载：52]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Auth',
+    2 => 'adminList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->adminList[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\adminList.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-02T15:18:05+08:00 ] 0.0.0.0 POST /admin/auth/adminList.html
+[ info ] localhost:4259/admin/auth/adminList.html [运行时间：0.097716s][吞吐率：10.23req/s] [内存消耗：2,682.12kb] [文件加载：60]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth',
+    2 => 'adminList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'content-length' => '23',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:4259',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:4259/admin/Auth/adminList.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+  'pageIndex' => '1',
+  'pageSize' => '15',
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->adminList[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001306s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_admin` [ RunTime:0.012235s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xf_admin` `a` LEFT JOIN `xf_auth_group` `ag` ON `a`.`group_id`=`ag`.`group_id` LIMIT 1 [ RunTime:0.000611s ]
+[ sql ] [ SQL ] SELECT `a`.*,`ag`.`title` FROM `xf_admin` `a` LEFT JOIN `xf_auth_group` `ag` ON `a`.`group_id`=`ag`.`group_id` LIMIT 0,15 [ RunTime:0.000768s ]
+---------------------------------------------------------------
+[ 2018-02-02T15:18:06+08:00 ] 0.0.0.0 GET /admin/Auth/adminGroup.html
+[ info ] localhost:4259/admin/Auth/adminGroup.html [运行时间：0.086672s][吞吐率：11.54req/s] [内存消耗：2,944.24kb] [文件加载：60]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Auth',
+    2 => 'adminGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; _gid=GA1.1.1799110723.1517541371; PHPSESSID=8956qoq9iu4oq4h73avl72khl0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Auth->adminGroup[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Auth.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\auth\adminGroup.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003328s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xf_auth_group` [ RunTime:0.008609s ]
+[ sql ] [ SQL ] SELECT * FROM `xf_auth_group` [ RunTime:0.000450s ]
