@@ -48,4 +48,29 @@ class Database extends Common
 		$result['code'] = 1;
 		return $result;
 	}
+	//修复
+	public function repair(){
+		$batchFlag = input('param.batchFlag',0,'intval');
+		//批量删除
+		if ($batchFlag) {
+			$table = input('key',array());
+		}else{
+			$table[] = input('tableName','');
+		}
+		if (empty($table)) {
+			$result['msg'] = '请选择要修复的表！';
+			$result['code'] = 0;
+			return $result;
+		}
+		$strTable = implode(',', $table);
+		if (!Db::query("REPATR TABLE {$strTable}")) {
+			$strTable = '';
+		}
+		$result['msg'] = '修复表成功！';
+		$result['url'] = url('database');
+		$result['code'] = 1;
+		return $result;
+	}
+	//备份
+	
 }
