@@ -238,10 +238,10 @@ class Auth extends Common
 			$arr = cache('authRuleList');
 			if (!$arr) {
 				$authRule = authRule::all(function($query){
-					$query->order('sort','asc')；
-				})；
+					$query->order('sort','asc');
+				});
 				$arr = $nav->menu($authRule);
-				cache('authRuleList',$arr,3600)；
+				cache('authRuleList',$arr,3600);
 			}
 			$this->assign('admin_rule',$arr);//权限列表
 			return $this->fetch();
@@ -268,7 +268,7 @@ class Auth extends Common
 		$statusone = db('auth_rule')->where(array('id'=>$id))->value('authopen');
 		if ($statusone == 1) {
 			$statedata = array('authopen'=>0);
-			db('auth_rule')->where('id'=>$id)->setField($statedata);
+			db('auth_rule')->where('id='.$id)->setField($statedata);
 			$result['info'] = '需要验证';
 			$result['status'] = 1;
 		}else{
