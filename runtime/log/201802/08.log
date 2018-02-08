@@ -676,3 +676,179 @@
 [ info ] [ DB ] INIT mysql
 [ info ] [ RUN ] app\admin\controller\Common->_empty[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Common.php ]
 [ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-02-08T14:35:56+08:00 ] 0.0.0.0 GET /admin/Database/database.html
+[ info ] localhost:4259/admin/Database/database.html [运行时间：0.101855s][吞吐率：9.82req/s] [内存消耗：2,695.45kb] [文件加载：58]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Database',
+    2 => 'database',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; PHPSESSID=28e2ashdka9g1f0ug2hk9euba6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Database->database[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Database.php ]
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\database\database.html [ array (
+  0 => 'dataList',
+  1 => 'total',
+  2 => 'tableNum',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011834s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW TABLE STATUS LIKE '%' [ RunTime:0.015563s ]
+---------------------------------------------------------------
+[ 2018-02-08T14:36:00+08:00 ] 0.0.0.0 POST /admin/database/optimize.html
+[ info ] localhost:4259/admin/database/optimize.html [运行时间：0.062593s][吞吐率：15.98req/s] [内存消耗：2,577.43kb] [文件加载：58]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'database',
+    2 => 'optimize',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'content-length' => '18',
+  'accept' => '*/*',
+  'origin' => 'http://localhost:4259',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:4259/admin/Database/database.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; PHPSESSID=28e2ashdka9g1f0ug2hk9euba6',
+)
+[ info ] [ PARAM ] array (
+  'tableName' => 'xf_admin',
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Database->optimize[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Database.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010934s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] OPTIMIZE TABLE xf_admin [ RunTime:0.003226s ]
+---------------------------------------------------------------
+[ 2018-02-08T14:36:02+08:00 ] 0.0.0.0 GET /admin/database/database.html
+[ info ] localhost:4259/admin/database/database.html [运行时间：0.074086s][吞吐率：13.50req/s] [内存消耗：2,695.35kb] [文件加载：58]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'database',
+    2 => 'database',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/Database/database.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; PHPSESSID=28e2ashdka9g1f0ug2hk9euba6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Database->database[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Database.php ]
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\database\database.html [ array (
+  0 => 'dataList',
+  1 => 'total',
+  2 => 'tableNum',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001861s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW TABLE STATUS LIKE '%' [ RunTime:0.003104s ]
+---------------------------------------------------------------
+[ 2018-02-08T15:29:57+08:00 ] 0.0.0.0 GET /admin/Database/database.html
+[ info ] localhost:4259/admin/Database/database.html [运行时间：0.100422s][吞吐率：9.96req/s] [内存消耗：2,695.36kb] [文件加载：58]
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Database',
+    2 => 'database',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:4259',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:4259/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'optimizelyEndUserId=oeu1511167744197r0.22256790140374139; ECS[visit_times]=2; _ym_uid=151330519863715653; Hm_lvt_d7e112eaeea65921aeaadcc0af8f2853=1513327355,1515568796; pgv_pvi=7416847360; _ga=GA1.1.531640230.1511167745; PHPSESSID=28e2ashdka9g1f0ug2hk9euba6',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\PHPStudy\WWW\XFPHP/app/admin\lang\zh-cn.php
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Database->database[ D:\PHPStudy\WWW\XFPHP\app\admin\controller\Database.php ]
+[ info ] [ VIEW ] D:\PHPStudy\WWW\XFPHP/app/admin\view\database\database.html [ array (
+  0 => 'dataList',
+  1 => 'total',
+  2 => 'tableNum',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001524s ] mysql:host=127.0.0.1;dbname=xfphp_db;charset=utf8
+[ sql ] [ SQL ] SHOW TABLE STATUS LIKE '%' [ RunTime:0.014516s ]
